@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.container{
+  max-width: 120rem;
+  /* border-left: 1px solid red;
+  border-right: 1px solid red; */
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+/* .section-todo{
+  display: flex;
+  justify-content: center;
+} */
+
+.app-title {
+  text-align: center;
+  padding: 2rem 0;
+  text-transform: capitalize;
+}
+
+.todo-container {
+  width: 100%;
+  min-height: 50rem;
+  /* border: 1px solid red; */
+  margin: 4rem auto 0 auto;
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.todo-titles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 7rem;
+  background-image: linear-gradient(to right, rgb(255, 115, 0), rgb(5, 121, 5));
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+  
+}
+
+
+
+.todo-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(200, 200, 200, 0.454);
+  background-color: #f6f5f6;
+}
+
+.todo-column {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.show-modal-btn {
+  background-color: #cbcbcc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+/* style Todo item */
+.todo-item{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(200, 200, 200, 0.454);
+  box-shadow: 0 0 0.3rem rgba(0,0,0,0.1);
+}
+
+.delete-todo{
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color 150ms;
+}
+
+.delete-todo:hover{
+  color: red;
+}
+
+/* Modal Cover*/
+.modal-cover {
+  background-color: rgba(0, 0, 0, 0.436);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.show-modal-cover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Modal Box */
+.modal-box {
+  position: fixed;
+  top: 10px;
+  width: 40rem;
+  background-color: rgb(255, 255, 255);
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  border-radius: 0.5rem;
+  transition: all 200ms linear;
+}
+
+.show-modal-box {
+  transform: translateX(-50%) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-body input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgb(211, 211, 211);
+  outline: none;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.modal-body button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  background-color: rgb(26, 123, 55);
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-modal-btn {
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.close-modal-btn:hover{
+  color: red;
+}
+
+
+/*------------------------------ responsive  ------------------------------ */
+/* @media  screen and (max-width:576px) {
+  .todo-table,.todo-titles{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+  }
+} */

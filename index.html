@@ -1,0 +1,48 @@
+<!DOCTYPE >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>draggable todo list</title>
+    <!-- css style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="todo-section">
+     <div class="container">
+      <h1 class="app-title">manage your tasks</h1>
+      <div class="todo-container">
+        <div class="todo-titles">
+          <p class="todo-status">no status</p>
+          <p class="todo-status">no statred</p>
+          <p class="todo-status">in progress</p>
+          <p class="todo-status">complete</p>
+        </div>
+        <div class="todo-table">
+          <div class="todo-column" id="no-status-column">
+            <div class="show-modal-btn">+ add todo</div>
+          </div>
+          <div class="todo-column" id="no-started-column"></div>
+          <div class="todo-column" id="in-progress-column"></div>
+          <div class="todo-column" id="complete-column"></div>
+        </div>
+      </div>
+     </div>
+    </section>
+    <!-- Modal Box -->
+    <div class="modal-cover"></div>
+      <div class="modal-box">
+        <div class="modal-header">
+          <span class="modal-title">Add to do</span>
+          <span class="close-modal-btn">&#x00D7;</span>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="" id="">
+          <button class="add-todo">add todo</button>
+        </div>
+      </div>
+    <!-- scripts -->
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
